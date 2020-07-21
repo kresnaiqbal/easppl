@@ -23,7 +23,7 @@
 			$username = isset($_POST['username']) ? $_POST['username'] : ' ';
 			$password = isset($_POST['password']) ? $_POST['password'] : ' ';
 
-			$sql = "select * from user where username='$username' and password='$password'";
+			$sql = "select * from nasabah where username='$username' and password='$password'";
 			$result=$conn->query($sql);
 			if($result->num_rows > 0){
 				$row = $result->fetch_assoc();

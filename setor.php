@@ -9,21 +9,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>KOPERASI POLBAN</title>
+    <title>SETOR</title>
   </head>
-
-  <?php
-    session_start();
-		if(!isset($_GET['content']))
-		{
-			$vcontent = 'home.php';
-		}
-		else
-		{
-			$vcontent = $_GET['content'];
-		}
-  ?>
-
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/eas/template.php">KOPERASI POLBAN</a>
@@ -34,7 +21,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-            <a class="nav-link" href="template.php">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/eas/template.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -43,7 +30,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/eas/admin.php">Daftar Nasabah Baru</a>
                     <a class="dropdown-item" href="/eas/setor.php">Setor Tabungan</a>
-                    <a class="dropdown-item" href="template.php?content=form_pinjam.php">Pinjam Uang</a>
+                    <a class="dropdown-item" href="/eas/pinjam.php">Pinjam Uang</a>
                     <a class="dropdown-item" href="/eas/bayar.php">Bayar Angsuran</a>
                 </div>
             </li>
@@ -54,9 +41,10 @@
         </ul>
      </div>
     </nav>
-    <div class="row mt-2 mx-auto">
-			<?php include $vcontent; ?>
-		</div>
+
+
+    
+
 
 
     <!-- Optional JavaScript -->
