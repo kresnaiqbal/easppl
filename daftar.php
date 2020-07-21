@@ -1,7 +1,6 @@
 <?php 
 
     include('connectdb.php');
-    $id = $_POST['id'];
     $nama = $_POST['nama'];
     $alamat = $_POST['alamat'];
     $nomor_hp = $_POST['nomor_hp'];
@@ -10,14 +9,24 @@
 
     move_uploaded_file($file_tmp, 'image/'.$foto);
 
-    if($id==!null){
-        $sql = "INSERT INTO nasabah VALUES ('".$id."','".$nama."','".$alamat."', '".$nomor_hp."','".$foto."');";
+    $sql = "INSERT INTO nasabah VALUES (null,'".$nama."','".$alamat."', '".$nomor_hp."','".$foto."');";
 
-        $conn->query($sql);
-        header("location:Admin.php?daftar_berhasil");
+    
+    if($conn->query($sql)){
+        $sql = "SELECT max(id_nasabah) FROM nasabah";
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_row($result);
+        $id_nasabah = $row[0];
+
+        $sql = "INSERT INTO tabungan VALUES (null,0,'".$id_nasabah."');";
+
+        if($conn->query($sql)){
+            header("location:template.php?content=view_nasabah_baru.php&id_nasabah=$id_nasabah");
+        }
+              
     }
     else{
-        header("location:Admin.php?daftar_error");
+        header("location:template.php?daftar_error");
     }
 
     

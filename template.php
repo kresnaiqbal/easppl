@@ -26,7 +26,7 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/eas/template.php">KOPERASI POLBAN</a>
+    <a class="navbar-brand" href="template.php">KOPERASI POLBAN</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -36,15 +36,17 @@
             <li class="nav-item active">
             <a class="nav-link" href="template.php">Home <span class="sr-only">(current)</span></a>
             </li>
+            <li>
+            <a class="nav-link" href="template.php?content=Admin.php">Daftar Nasabah <span class="sr-only">(current)</span></a>
+            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Transaksi
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/eas/admin.php">Daftar Nasabah Baru</a>
-                    <a class="dropdown-item" href="/eas/setor.php">Setor Tabungan</a>
+                    <a class="dropdown-item" href="template.php?content=form_setor_tabungan.php">Setor Tabungan</a>
                     <a class="dropdown-item" href="template.php?content=form_pinjam.php">Pinjam Uang</a>
-                    <a class="dropdown-item" href="/eas/bayar.php">Bayar Angsuran</a>
+                    <a class="dropdown-item" href="template.php?content=form_setor_angsuran.php">Bayar Angsuran</a>
                 </div>
             </li>
             <li class="nav-item ">
@@ -55,7 +57,13 @@
      </div>
     </nav>
     <div class="row mt-2 mx-auto">
-			<?php include $vcontent; ?>
+      <?php 
+      if(isset($_GET["daftar_error"]))
+      {
+          echo "<h5 class='mx-auto text-center' style='color:red';>Pendaftaran Gagal</h5>";
+      }
+
+      include $vcontent; ?>
 		</div>
 
 

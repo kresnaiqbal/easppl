@@ -1,9 +1,10 @@
 <html>
-<div class="table mt-5 p-5">
-    <table border ="5">
+<div class="table mt-3 p-5">
+    <table>
         <h2>
             LIST NASABAH
         </h2>
+        <th></th>
         <th>NAMA</th>
         <th>ALAMAT</th>
         <th>NOMOR HP</th>
@@ -18,6 +19,10 @@
 
         ?>
         <tr>
+        <td>
+            <?php $gambar = $row['foto']?>
+            <img src="image/<?php echo $gambar?>" width="80" height="100">
+        </td>
         <td>
             <?php 
             echo $row['nama_nasabah'];
