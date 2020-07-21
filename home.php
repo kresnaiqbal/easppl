@@ -1,13 +1,14 @@
 <html>
-<div class="table mt-5 p-5">
-    <table border ="5">
-        <h2>
-            LIST NASABAH
-        </h2>
-        <th>NAMA</th>
-        <th>ALAMAT</th>
-        <th>NOMOR HP</th>
-        <th>TOTAL TABUNGAN</th>
+<div class="table mt-1 p-1">
+    <center><font size="6">List Nasabah</font></center>
+    <hr>
+    <center><table border ="5">
+        
+        <th style="text-align: center;">FOTO</th>
+        <th style="text-align: center;">NAMA</th>
+        <th style="text-align: center;">ALAMAT</th>
+        <th style="text-align: center;">NOMOR HP</th>
+        <th style="text-align: center;">TOTAL TABUNGAN</th>
         <?php 
             include('connectdb.php');
 
@@ -18,6 +19,9 @@
 
         ?>
         <tr>
+        <td>
+            <img src="image/<?php echo $row['foto']?>" width="80db" height="100db">
+        </td>
         <td>
             <?php 
             echo $row['nama_nasabah'];
@@ -48,7 +52,7 @@
         <?php 
             }
         ?>
-    </table>
+    </table></center>
     <!-- <div class="dropdown mt-3">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Unduh

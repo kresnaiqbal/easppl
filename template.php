@@ -41,7 +41,7 @@
                 Transaksi
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="template.php?content=admin.php">Daftar Nasabah Baru</a>
+                    <a class="dropdown-item" href="admin.php">Daftar Nasabah Baru</a>
                     <a class="dropdown-item" href="template.php?content=setor_tabungan.php">Setor Tabungan</a>
                     <a class="dropdown-item" href="template.php?content=form_pinjam.php">Pinjam Uang</a>
                     <a class="dropdown-item" href="template.php?content=bayar.php">Bayar Angsuran</a>

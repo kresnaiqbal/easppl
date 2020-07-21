@@ -28,10 +28,10 @@
                 Transaksi
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/eas/admin.php">Daftar Nasabah Baru</a>
-                    <a class="dropdown-item" href="/eas/setor.php">Setor Tabungan</a>
-                    <a class="dropdown-item" href="/eas/pinjam.php">Pinjam Uang</a>
-                    <a class="dropdown-item" href="/eas/bayar.php">Bayar Angsuran</a>
+                <a class="dropdown-item" href="admin.php">Daftar Nasabah Baru</a>
+                    <a class="dropdown-item" href="template.php?content=setor_tabungan.php">Setor Tabungan</a>
+                    <a class="dropdown-item" href="template.php?content=form_pinjam.php">Pinjam Uang</a>
+                    <a class="dropdown-item" href="template.php?content=bayar.php">Bayar Angsuran</a>
                 </div>
             </li>
             <li class="nav-item">
@@ -56,11 +56,11 @@
     <div class="container">
     <form class="mt-3 mx-auto" action="daftar.php" method="post" enctype="multipart/form-data">
         <div class="form-group">
-            <label for="id">Id</label>
+            <label for="id" align >Id</label>
             <input type="text" class="form-control" name="id" placeholder="id">
         </div>
         <div class="form-group">
-            <label for="nama">Nama</label>
+            <label for="nama" >Nama</label>
             <input type="text" class="form-control" name="nama" placeholder="nama">
         </div>
         <div class="form-group">
