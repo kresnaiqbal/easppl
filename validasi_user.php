@@ -6,7 +6,7 @@
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    $sql = mysqli_query($conn, "SELECT * FROM anggota where username = '$username' and password = '$password'");
+    $sql = mysqli_query($conn, "SELECT * FROM admin where username = '$username' and password = '$password'");
     $login = mysqli_num_rows($sql);
 
     if($login)

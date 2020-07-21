@@ -10,6 +10,19 @@
 
     <title>KOPERASI POLBAN</title>
   </head>
+
+  <?php
+    session_start();
+		if(!isset($_GET['content']))
+		{
+			$vcontent = 'home.php';
+		}
+		else
+		{
+			$vcontent = $_GET['content'];
+		}
+  ?>
+
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/eas/template.php">KOPERASI POLBAN</a>
@@ -39,6 +52,9 @@
         </ul>
      </div>
     </nav>
+    <div class="row mt-2 mx-auto">
+			<?php include $vcontent; ?>
+		</div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
