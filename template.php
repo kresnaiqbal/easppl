@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>KOPERASI POLBAN</title>
+    <title>KOPERASI</title>
   </head>
 
   <?php
@@ -26,7 +26,7 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/eas/template.php">KOPERASI POLBAN</a>
+    <a class="navbar-brand" href="/eas/template.php">KOPERASI</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -43,7 +43,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/eas/admin.php">Daftar Nasabah Baru</a>
                     <a class="dropdown-item" href="template.php?content=form_setoran.php">Setor Tabungan</a>
-                    <a class="dropdown-item" href="template.php?content=form_pinjam.php">Pinjam Uang</a>
+                    <a class="dropdown-item" href="template.php?content=form_pinjam.php">Ajukan Pinjaman</a>
                     <a class="dropdown-item" href="/eas/bayar.php">Bayar Angsuran</a>
                 </div>
             </li>
