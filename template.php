@@ -33,7 +33,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-            <a class="nav-link" href="/eas/template.php">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="template.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="/eas/admin.php">Admin</a>
@@ -44,7 +44,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/eas/setor.php">Setor Tabungan</a>
-                    <a class="dropdown-item" href="/eas/pinjam.php">Pinjam Uang</a>
+                    <a class="dropdown-item" href="template.php?content=form_pinjam.php">Pinjam Uang</a>
                     <a class="dropdown-item" href="/eas/bayar.php">Bayar Angsuran</a>
                 </div>
             </li>
