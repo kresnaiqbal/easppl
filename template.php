@@ -42,9 +42,19 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/eas/admin.php">Daftar Nasabah Baru</a>
-                    <a class="dropdown-item" href="/eas/setor.php">Setor Tabungan</a>
+                    <a class="dropdown-item" href="template.php?content=form_setoran.php">Setor Tabungan</a>
                     <a class="dropdown-item" href="template.php?content=form_pinjam.php">Pinjam Uang</a>
                     <a class="dropdown-item" href="/eas/bayar.php">Bayar Angsuran</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Riwayat
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/eas/admin.php">Setoran</a>
+                    <a class="dropdown-item" href="template.php?content=riwayat_pinjaman.php">Pinjaman</a>
+                    <a class="dropdown-item" href="template.php?content=form_pinjam.php">Angsuran</a>
                 </div>
             </li>
             <li class="nav-item ">
