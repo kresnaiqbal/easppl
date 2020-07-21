@@ -8,6 +8,7 @@
         <th>NAMA</th>
         <th>ALAMAT</th>
         <th>NOMOR HP</th>
+        <th>NOMOR REKENING</th>
         <th>TOTAL TABUNGAN</th>
         <?php 
             include('connectdb.php');
@@ -38,17 +39,16 @@
             echo $row['nomor_hp'];
             ?>
         </td>
-        <td>
             <?php
             $id_nasabah = $row['id_nasabah'];
             $sql_tabungan = "SELECT * FROM tabungan where id_nasabah = '$id_nasabah'";
             $hasil = $conn->query($sql_tabungan);
 
             while($tabungan = $hasil->fetch_assoc()){
-                echo $tabungan['saldo'];
+                echo "<td>".$tabungan['nomor_rekening']."</td>";
+                echo "<td>".$tabungan['saldo']."</td>";
             }
             ?>
-        </td>
         </tr>
         <?php 
             }
@@ -65,5 +65,55 @@
     </div> -->
 
 
+</div>
+<div class="table mt-3 p-5">
+    <table>
+        <h2>
+            LIST PINJAMAN
+        </h2>
+        <th>PEMINJAM</th>
+        <th>TANGGAL PEMINJAM</th>
+        <th>JUMLAH PINJAMAN</th>
+        <th>SISA YANG BELUM DIBAYAR</th>
+        <?php 
+
+            $sql = "SELECT * FROM pinjaman";
+            $result = $conn->query($sql);
+
+            while($row = $result->fetch_assoc()){
+
+        ?>
+        <tr>
+        <td>
+            <?php 
+            $id_nasabah = $row['id_nasabah'];
+            $sql_nasabah = "SELECT * FROM nasabah where id_nasabah = '$id_nasabah'";
+            $hasil = $conn->query($sql_nasabah);
+
+            while($nasabah = $hasil->fetch_assoc()){
+                echo $nasabah['nama_nasabah'];
+            }
+            ?>
+        </td>
+        <td>
+            <?php 
+            echo $row['tanggal_pinjam'];
+            ?>
+        </td>
+        <td>
+            <?php
+            echo $row['jumlah_pinjaman'];
+            ?>
+        </td>
+        <td>
+            <?php
+            echo $row['sisa_pinjam'];
+            ?>
+        </td>
+        </tr>
+        <?php 
+            }
+        ?>
+    </table>
 </div>
 </html>

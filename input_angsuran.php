@@ -14,5 +14,8 @@
     $sql = "UPDATE pinjaman SET sisa_pinjam = '$hasil' where id_pinjaman = '$id_pinjaman'";
     $conn->query($sql);
 
+    $sql = "INSERT INTO angsuran VALUES (null, NOW(), '".$jumlah_angsuran."', '".$hasil."', '".$id_pinjaman."');";
+    $result = $conn->query($sql);
+
     header("location:template.php");
 ?>

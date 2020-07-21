@@ -14,5 +14,8 @@
     $sql = "UPDATE tabungan SET saldo = '$hasil' where nomor_rekening = '$nomor_rekening'";
     $conn->query($sql);
 
+    $sql = "INSERT INTO setoran VALUES (null, '".$jumlah_setoran."', NOW(), '".$nomor_rekening."');";
+    $result = $conn->query($sql);
+
     header("location:template.php");
 ?>
