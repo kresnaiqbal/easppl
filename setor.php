@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,9 +9,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>TAMBAH DATA</title>
+    <title>SETOR</title>
   </head>
-
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/eas/template.php">KOPERASI POLBAN</a>
@@ -34,7 +34,7 @@
                     <a class="dropdown-item" href="/eas/bayar.php">Bayar Angsuran</a>
                 </div>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ">
                 <a class="nav-link" href="logout.php">Logout</a>
             </li>
            
@@ -42,43 +42,9 @@
      </div>
     </nav>
 
-    <center><font size="6">Tambah Data Nasabah</font></center>
-    <hr>
-    <?php
-        if(isset($_GET["daftar_error"]))
-        {
-            echo "<h5 class='mt-5 mx-auto text-center' style='color:red';>Masukan data yang benar</h5>";
-        } 
-        if(isset($_GET["daftar_berhasil"])){
-            echo "<h5 class='mt-5 mx-auto text-center' style='color:green';>Data Berhasil dimasukan</h5>";
-        }
-    ?>
-    <div class="container">
-    <form class="mt-3 mx-auto" action="daftar.php" method="post" enctype="multipart/form-data">
-        <div class="form-group">
-            <label for="id">Id</label>
-            <input type="text" class="form-control" name="id" placeholder="id">
-        </div>
-        <div class="form-group">
-            <label for="nama">Nama</label>
-            <input type="text" class="form-control" name="nama" placeholder="nama">
-        </div>
-        <div class="form-group">
-            <label for="alamat">Alamat</label>
-            <input type="text" class="form-control" name="alamat" placeholder="alamat" >
-        </div>
-        <div class="form-group">
-            <label for="nomor_hp">No Hp</label>
-            <input type="text" class="form-control" name="nomor_hp" placeholder="nomor_hp" >
-        </div>
-        <div class="form-group">
-            <label for="foto">Foto</label>
-            <input type="file" class="form-control-file" name="file" placeholder="foto">
-        </div>
-        <input type="submit" value="Daftar" class="btn btn-primary mb-2">
-        
-    </form>
-    </div>
+
+    
+
 
 
     <!-- Optional JavaScript -->

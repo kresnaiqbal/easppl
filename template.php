@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -22,23 +23,25 @@
             <li class="nav-item active">
             <a class="nav-link" href="/eas/template.php">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-            <a class="nav-link" href="/eas/admin.php">Admin</a>
-            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Transaksi
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/eas/admin.php">Daftar Nasabah Baru</a>
                     <a class="dropdown-item" href="/eas/setor.php">Setor Tabungan</a>
                     <a class="dropdown-item" href="/eas/pinjam.php">Pinjam Uang</a>
                     <a class="dropdown-item" href="/eas/bayar.php">Bayar Angsuran</a>
                 </div>
             </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="logout.php">Logout</a>
+            </li>
            
         </ul>
      </div>
     </nav>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
