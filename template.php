@@ -14,6 +14,11 @@
 
   <?php
     session_start();
+
+    if(!isset($_SESSION["username"])){
+      header("location:login_dengan_database.php");
+    }
+
 		if(!isset($_GET['content']))
 		{
 			$vcontent = 'home.php';
@@ -23,6 +28,7 @@
 			$vcontent = $_GET['content'];
 		}
   ?>
+
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -44,6 +50,7 @@
                 Transaksi
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="template.php?content=form_penarikan.php">Penarikan Tabungan</a>
                     <a class="dropdown-item" href="template.php?content=form_setor_tabungan.php">Setor Tabungan</a>
                     <a class="dropdown-item" href="template.php?content=form_pinjam.php">Pinjam Uang</a>
                     <a class="dropdown-item" href="template.php?content=form_setor_angsuran.php">Bayar Angsuran</a>

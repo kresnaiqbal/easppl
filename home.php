@@ -128,4 +128,145 @@
         ?>
     </table>
 </div>
+
+<div class="table mt-3 p-5">
+    <table>
+        <h2>
+            LIST ANGSURAN
+        </h2>
+        <th>ID</th>
+        <th>JUMLAH ANGSURAN</th>
+        <th>TANGGAL ANGSUR</th>
+        <th>SISA ANGSURAN YANG HARUS DIBAYAR</th>
+        <th>ID PINJAMAN</th>
+        <?php 
+
+            $sql = "SELECT * FROM angsuran";
+            $result = $conn->query($sql);
+
+            while($row = $result->fetch_assoc()){
+
+        ?>
+        <tr>
+        <td>
+            <?php 
+                echo $row['id_angsuran'];
+            ?>
+        </td>
+        <td>
+            <?php 
+                echo $row['jumlah']
+            ?>
+        </td>
+        <td>
+            <?php 
+            echo $row['tanggal_angsuran'];
+            ?>
+        </td>
+        <td>
+            <?php
+            echo $row['sisa_angsuran'];
+            ?>
+        </td>
+        <td>
+            <?php
+            echo $row['id_pinjaman'];
+            ?>
+        </td>
+        </tr>
+        <?php 
+            }
+        ?>
+    </table>
+</div>
+
+<div class="table mt-3 p-5">
+    <table>
+        <h2>
+            LIST PENARIKAN
+        </h2>
+        <th>ID</th>
+        <th>JUMLAH_PENARIKAN</th>
+        <th>TANGGAL PEMINJAMAN</th>
+        <th>NOMOR REKENING</th>
+        <?php 
+
+            $sql = "SELECT * FROM penarikan";
+            $result = $conn->query($sql);
+
+            while($row = $result->fetch_assoc()){
+
+        ?>
+        <tr>
+        <td>
+            <?php 
+                echo $row['id_penarikan'];
+            ?>
+        </td>
+        <td>
+            <?php 
+                echo $row['jumlah_penarikan']
+            ?>
+        </td>
+        <td>
+            <?php 
+            echo $row['tanggal_penarikan'];
+            ?>
+        </td>
+        <td>
+            <?php
+            echo $row['nomor_rekening'];
+            ?>
+        </td>
+        </tr>
+        <?php 
+            }
+        ?>
+    </table>
+</div>
+
+<div class="table mt-3 p-5">
+    <table>
+        <h2>
+            LIST PENYETORAN
+        </h2>
+        <th>ID</th>
+        <th>JUMLAH SETOR</th>
+        <th>TANGGAL SETOR</th>
+        <th>NOMOR REKENING</th>
+        <?php 
+
+            $sql = "SELECT * FROM setoran";
+            $result = $conn->query($sql);
+
+            while($row = $result->fetch_assoc()){
+
+        ?>
+        <tr>
+        <td>
+            <?php 
+                echo $row['id_setor'];
+            ?>
+        </td>
+        <td>
+            <?php 
+                echo $row['jumlah_setor']
+            ?>
+        </td>
+        <td>
+            <?php 
+            echo $row['tanggal_setor'];
+            ?>
+        </td>
+        <td>
+            <?php
+            echo $row['nomor_rekening'];
+            ?>
+        </td>
+        </tr>
+        <?php 
+            }
+        ?>
+    </table>
+</div>
 </html>
