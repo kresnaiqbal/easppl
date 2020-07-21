@@ -5,6 +5,7 @@
             LIST NASABAH
         </h2>
         <th></th>
+        <th>ID</th>
         <th>NAMA</th>
         <th>ALAMAT</th>
         <th>NOMOR HP</th>
@@ -23,6 +24,11 @@
         <td>
             <?php $gambar = $row['foto']?>
             <img src="image/<?php echo $gambar?>" width="80" height="100">
+        </td>
+        <td>
+            <?php 
+            echo $row['id_nasabah'];
+            ?>
         </td>
         <td>
             <?php 
@@ -71,9 +77,10 @@
         <h2>
             LIST PINJAMAN
         </h2>
+        <th>ID</th>
         <th>PEMINJAM</th>
-        <th>TANGGAL PEMINJAM</th>
-        <th>JUMLAH PINJAMAN</th>
+        <th>TANGGAL PEMINJAMAN</th>
+        <th>JUMLAH PINJAMANAN</th>
         <th>SISA YANG BELUM DIBAYAR</th>
         <?php 
 
@@ -84,6 +91,11 @@
 
         ?>
         <tr>
+        <td>
+            <?php 
+                echo $row['id_pinjaman'];
+            ?>
+        </td>
         <td>
             <?php 
             $id_nasabah = $row['id_nasabah'];
